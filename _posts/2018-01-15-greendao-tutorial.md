@@ -131,7 +131,7 @@ greendao {
 #### [챌범: 최고 애정 앨범](https://play.google.com/store/apps/details?id=com.gofd.mcauto.chaelbum)
 
 개인용 잠금화면 안드로이드 앱
-
+<script id="dsq-count-scr" src="//mcautos-blog.disqus.com/count.js" async></script>
 {% if page.comments %}
 <div id="disqus_thread"></div>
 <script>

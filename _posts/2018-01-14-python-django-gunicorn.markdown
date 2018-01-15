@@ -266,6 +266,8 @@ systemctl start mysqld
 ```
 
 **Django & mysql 연동 **
+
+<script id="dsq-count-scr" src="//mcautos-blog.disqus.com/count.js" async></script>
 {% if page.comments %}
 <div id="disqus_thread"></div>
 <script>
