@@ -126,3 +126,8 @@ greendao {
     schemaVersion 1 	// 반드시 현재보다 큰 숫자
 }
 ```
+#### 참고 예시
+
+#### [챌범: 최고 애정 앨범](https://play.google.com/store/apps/details?id=com.gofd.mcauto.chaelbum)
+
+개인용 잠금화면 안드로이드 앱

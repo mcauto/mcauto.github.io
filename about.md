@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-포트폴리오
+아무거나 손대는 개발자
