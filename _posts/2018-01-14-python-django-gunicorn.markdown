@@ -1,8 +1,9 @@
 ---
 layout: post
+comments: true
 title:  "Python 개발 환경 구축과 배포를 한번에!"
 date:   2018-01-14 00:21:13 +0900
-categories: backend
+categories: back-end
 ---
 # **Python 개발 환경 구축**
 
@@ -267,6 +268,3 @@ systemctl start mysqld
 **Django & mysql 연동 **
 
 <https://www.digitalocean.com/community/tutorials/how-to-create-a-django-app-and-connect-it-to-a-database>
-
-
-
