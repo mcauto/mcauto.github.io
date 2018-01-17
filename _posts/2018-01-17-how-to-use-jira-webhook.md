@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Redmine, Jira 같이 사용하기"
+title:  "Redmine, Jira 같이 사용하기 2"
 date:   2018-01-17 20:00:00 +0900
 categories: back-end
 ---
