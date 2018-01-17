@@ -1,6 +1,15 @@
 ---
 layout: page
 ---
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112592786-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-112592786-1');
+</script>
+
 {% for post in site.categories[page.category] %}
     <p><a href="{{ post.url | absolute_url }}"> {{ post.title }}</a></p>
 {% endfor %}

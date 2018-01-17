@@ -5,6 +5,16 @@ title:  "Redmine, Jira 같이 사용하기"
 date:   2018-01-16 18:00:00 +0900
 categories: back-end
 ---
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112592786-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112592786-1');
+</script>
+
 # Redmine, Jira 같이 사용하기
 
 [Redmine docker](https://hub.docker.com/_/redmine/), [Jira docker](https://hub.docker.com/r/cptactionhank/atlassian-jira/) 설치

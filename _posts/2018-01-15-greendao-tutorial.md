@@ -5,6 +5,16 @@ title:  "Android ORM GreenDAO 사용하기"
 date:   2018-01-15 21:28:00 +0900
 categories: android
 ---
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112592786-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112592786-1');
+</script>
+
 # Android ORM GreenDAO 사용하기
 
 출처: [GreenDAO Github](https://github.com/greenrobot/greenDAO),  [GreenDAO document](http://greenrobot.org/greendao/documentation/updating-to-greendao-3-and-annotations/)

@@ -5,6 +5,16 @@ title:  "Redmine, Jira 같이 사용하기 2"
 date:   2018-01-17 20:20:00 +0900
 categories: back-end
 ---
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112592786-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112592786-1');
+</script>
+
 # Jira Webhook 사용하기
 
 ## Webhook

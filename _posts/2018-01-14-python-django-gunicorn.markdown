@@ -5,6 +5,16 @@ title:  "Python 개발 환경 구축과 배포를 한번에!"
 date:   2018-01-14 00:21:13 +0900
 categories: back-end
 ---
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112592786-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112592786-1');
+</script>
+
 # **Python 개발 환경 구축**
 
 ​	사용 스택: Docker, Python3.6, Django, Nginx, Mysql, gunicorn
