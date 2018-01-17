@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title:  "Redmine, Jira 같이 사용하기 2"
-date:   2018-01-17 20:00:00 +0900
+date:   2018-01-17 20:20:00 +0900
 categories: back-end
 ---
 # Jira Webhook 사용하기
@@ -42,11 +42,35 @@ Events: Issue Updated, Issue Created
 
  **JIRA 관리 > 시스템 > 왼쪽 메뉴 중 고급 > 웹훅** 또는 키보드입력 **`g`+`g`+`웹훅`**
 
+## 개발 중 일어난 문제
 
+#### post.json
 
-## 사용하기 예제
+```http
+@Post 
+http://localhost
+```
+
+```json
+{
+  "title":"hi"
+  "description":"data"
+}
+```
+
+POSTMAN은 성공 JIRA Webhook은 실패
+
+JIRA Webhook이 전송이 제대로 되는지 확인하기 위해 ngrok을 사용해 봄
+
+## Webhook 예제와 Ngrok
 
 참고: [Tutorial: Create and Trigger a Webhook](https://confluence.atlassian.com/bitbucket/tutorial-create-and-trigger-a-webhook-747606432.html)
+
+JIRA의 Webhook을 만들고 어댑터 역할을 하는 프로젝트를 생성하여 POST를 보냈으나 결과값이 나오지 않는 문제가 발생
+
+POSTMAN의 POST 요청에 대한 결과는 작동함	JIRA webhook은 작동을 안함
+
+POST 요청이 잘 왔는지 확인하기위해 Ngrok을 사용해보기로 함
 
 ```Bash
 git clone your-github-id@bitbucket.org:atlassianlabs/webhook-listener.git
@@ -97,31 +121,9 @@ https://1c4fc821.ngrok.io
 
 이후 접속하는 모든 GET, POST, PUT, DELETE의 정보를 확인 할 수 있다
 
-개인적으로 postman을 써서 확인을 많이 했지만 ngrok을 사용해서 개발하면 따로 코드 작성 없이 확인 할 수 있을 것으로 판단됨
 
 
-
-## 개발 중 일어난 문제
-
-#### post.json 
-
-```http
-@Post 
-http://localhost
-```
-
-```json
-{
-  "title":"hi"
-  "description":"data"
-}
-```
-
-POSTMAN은 성공 JIRA Webhook은 실패
-
-JIRA Webhook이 전송이 제대로 되는지 확인하기 위해 ngrok을 사용해 봄
-
-## 문제 해결책
+## 해결책
 
 JIRA container, Webhook receiver container간의 localhost 차이 때문
 
