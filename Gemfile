@@ -1,6 +1,10 @@
 source "https://rubygems.org"
 gem "jekyll", "~> 3.7.0"
 gem "jekyll-theme-hydejack"
+gem "jekyll-paginate", "~> 1.1"
+gem "jekyll-sitemap", "~> 1.0"
+gem "jekyll-redirect-from", "~> 0.12"
+gem "classifier-reborn"
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
 end
