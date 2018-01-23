@@ -4,16 +4,8 @@ comments: true
 title:  "Python 개발 환경 구축과 배포를 한번에!"
 date:   2018-01-14 00:21:13 +0900
 categories: back-end
+description: Python 개발 환경 구축
 ---
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112592786-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-112592786-1');
-</script>
 
 # **Python 개발 환경 구축**
 
@@ -233,7 +225,7 @@ systemctl status gunicorn
 vim /etc/nginx/conf.d/django_test.conf
 ```
 
-```Bash
+```bash
 server {
         listen 80;
         server_name 0.0.0.0;
@@ -255,7 +247,7 @@ server {
 }
 ```
 
-```Bash
+```bash
 # nginx config 문법 검사 및 재기동
 nginx -t
 ```
@@ -266,7 +258,7 @@ nginx -t
 
 출처: [How to Install MySQL on CentOS 7](https://linode.com/docs/databases/mysql/how-to-install-mysql-on-centos-7/)
 
-```
+```bash
 yum install wget
 wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
 rpm -ivh mysql-community-release-el7-5.noarch.rpm
@@ -276,27 +268,3 @@ systemctl start mysqld
 ```
 
 **Django & mysql 연동 **
-
-<script id="dsq-count-scr" src="//mcautos-blog.disqus.com/count.js" async></script>
-{% if page.comments %}
-<div id="disqus_thread"></div>
-<script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://mcautos-blog.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-{% endif %}

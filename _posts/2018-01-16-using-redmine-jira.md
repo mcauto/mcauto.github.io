@@ -4,17 +4,8 @@ comments: true
 title:  "Redmine, Jira 같이 사용하기"
 date:   2018-01-16 18:00:00 +0900
 categories: back-end
+description: Jira, redmine 동기화 개발을 위한 개발환경 구축
 ---
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112592786-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-112592786-1');
-</script>
-
 # Redmine, Jira 같이 사용하기
 
 [Redmine docker](https://hub.docker.com/_/redmine/), [Jira docker](https://hub.docker.com/r/cptactionhank/atlassian-jira/) 설치
@@ -173,27 +164,3 @@ POST /issues.json
 ```
 
 위의 REST API를 호출하는 프로그램을 작성하여 동시에 글을 올릴 수 있다
-
-<script id="dsq-count-scr" src="//mcautos-blog.disqus.com/count.js" async></script>
-{% if page.comments %}
-<div id="disqus_thread"></div>
-<script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://mcautos-blog.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-{% endif %}

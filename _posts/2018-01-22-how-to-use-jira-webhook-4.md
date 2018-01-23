@@ -4,6 +4,7 @@ comments: true
 title:  "Redmine, Jira 같이 사용하기 5(완성)"
 date:   2018-01-22 20:31:00 +0900
 categories: back-end
+description: Jira의 project, board 변경 사항을 Jira Webhook을 이용하여 Redmine에 동기화시키는 Adapter 개발 완성
 ---
 # Jira Webhook Adapter 만들기 (to Redmine)
 
