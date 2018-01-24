@@ -10,7 +10,7 @@ description: Jira의 project, board 변경 사항을 Jira Webhook을 이용하�
 
 ### Builder.py
 
-```Python
+```python
 from operator import eq
 import json,requests
 
@@ -187,7 +187,7 @@ class CommentBuilder(Builder):
 
 ### WebhookEvent.py
 
-```Python
+```python
 from Builder import *
 
 
@@ -243,7 +243,7 @@ class WebhookEvent:
 
 ### webhook.py
 
-```Python
+```python
 from flask import Flask, request
 import json, requests
 from WebhookEvent import WebhookEvent

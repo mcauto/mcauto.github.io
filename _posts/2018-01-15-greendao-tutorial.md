@@ -51,7 +51,7 @@ dependencies {
 
 
 
-```Java
+```java
 @Entity(nameInDb="posts")
 public class Post{				// 객체 하나가 하나의 Row
   @Id(autoincrement = true)  	// AUTO_INCREASE
@@ -68,7 +68,7 @@ public class Post{				// 객체 하나가 하나의 Row
 
 5. Build (초록색 망치 Click)
 
-```Bash
+```bash
 # Build하면 아래의 경로에 greendao 객체 자동 생성
 ../프로젝트이름/app/build/generated/source/greendao
 
@@ -80,7 +80,7 @@ public class Post{				// 객체 하나가 하나의 Row
 
 6. Application 정의
 
-```Java
+```java
 public class PostApplication extends Application{
   private DaoSession daoSession;
   public static final boolean ENCRYPTED = true;
@@ -105,7 +105,7 @@ public class PostApplication extends Application{
 
 8. Dao 사용하기 예제
 
-```Java
+```java
 PostApplication postApp = (PostApplication) getApplication();
 PostDao postDao = postApp.getDaoSession().getPostDao();
 Long post_id = 1;
@@ -122,7 +122,7 @@ postDao.insert(post);		// DB Insert
 
 9. Database 스키마가 변경 시: 스키마 버전 변경
 
-```Java
+```java
 // build.gradle(Module: app)
 greendao {
     schemaVersion 1 	// 반드시 현재보다 큰 숫자

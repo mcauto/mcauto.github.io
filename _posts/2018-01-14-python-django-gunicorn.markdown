@@ -1,15 +1,15 @@
 ---
 layout: post
 comments: true
-title:  "Python 개발 환경 구축과 배포를 한번에!"
+title:  "python 개발 환경 구축과 배포를 한번에!"
 date:   2018-01-14 00:21:13 +0900
 categories: back-end
-description: Python 개발 환경 구축
+description: python 개발 환경 구축
 ---
 
-# **Python 개발 환경 구축**
+# **python 개발 환경 구축**
 
-​	사용 스택: Docker, Python3.6, Django, Nginx, Mysql, gunicorn
+​	사용 스택: Docker, python3.6, Django, Nginx, Mysql, gunicorn
 
 ### **Docker**
 
@@ -77,7 +77,7 @@ systemctl enable nginx
 
 ### **2. centos 7 에 python3 설치**
 
-출처: [How to install Python 3.6.1 on CentOS 7](https://janikarhunen.fi/how-to-install-python-3-6-1-on-centos-7.html)
+출처: [How to install python 3.6.1 on CentOS 7](https://janikarhunen.fi/how-to-install-python-3-6-1-on-centos-7.html)
 
 #### 필수 유틸리티 설치
 
@@ -87,7 +87,7 @@ yum install yum-utils
 yum groupinstall development
 ```
 
-#### Python3.6 설치
+#### python3.6 설치
 
 ```Bash
 # Repository
@@ -103,14 +103,14 @@ python3.6 -V
 yum install python36u-pip
 yum install python36u-devel
 
-# Python 버전 확인
+# python 버전 확인
 python -V
 # 출력
-Python 2.7.5
+python 2.7.5
 
-# Python3 버전 확인
+# python3 버전 확인
 python3.6 -V
-Python 3.6.1
+python 3.6.1
 ```
 
 #### 파이썬 가상환경(virtual environment) 사용

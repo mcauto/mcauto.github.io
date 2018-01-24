@@ -229,9 +229,9 @@ POST /issues.[format]
 }
 ```
 
-## Testing code by Python
+## Testing code by python
 
-```Python
+```python
 from flask import Flask, request
 import json, requests
 

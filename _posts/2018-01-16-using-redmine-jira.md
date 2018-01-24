@@ -10,7 +10,7 @@ description: Jira, redmine 동기화 개발을 위한 개발환경 구축
 
 [Redmine docker](https://hub.docker.com/_/redmine/), [Jira docker](https://hub.docker.com/r/cptactionhank/atlassian-jira/) 설치
 
-```Bash
+```bash
 # docker redmine official image 다운로드
 docker pull redmine
 

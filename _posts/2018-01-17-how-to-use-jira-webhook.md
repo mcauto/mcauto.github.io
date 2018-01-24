@@ -91,7 +91,7 @@ ngrok free 버전은 subdomain을 사용할 수 없으므로 파일을 아래와
 
 ```Bash
 # .Procfile
-listener: PYTHONUNBUFFERED=true python listener.py
+listener: pythonUNBUFFERED=true python listener.py
 tunnel: ngrok http 80 #-log stdout -subdomain=0e6dc686
 ```
 
