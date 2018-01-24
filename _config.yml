@@ -13,12 +13,12 @@ url:                 https://mcauto.github.io
 baseurl:             ""
 
 # A very short description of your page
-tagline:             창업이 하고싶은 개발자
+tagline:             창업 망한 개발자
 
 # A short description of the page, used in the sidebar and as fallback for the meta description tag.
 # Markdown enabled, but don't use more than one paragraph (enforced by `>`)
 description:         >
-  창업이 하고싶은 게발자
+  창업 망한 개발자
   좋아하는 개발
   아이디어 구현
   새로운 기술을 배우기
@@ -30,8 +30,8 @@ author:
   email:             mcauto@naver.com
 
 # Fallback image and color
-image:               
-color:               
+image:               ''
+color:               '#4BABF3'
 
 # The font used for headings. Expects a string that is a valid CSS font-family value.
 font_heading:        "'Lato', 'Sans-serif'"
@@ -77,7 +77,11 @@ paginate_path:       '/page-:num/'
 
 # Uncomment this line if third party plugins fail to work with dynimically loaded pages
 # disable_push_state:  true
+ 
+ # You can set this to `true` if you don't want to set the `theme-color` meta tag,
+  # This only affects the meta tag, not the color specified in the app manifest.
 
+  
 # Uncomment this line if want to disable the touch drawer on mobile
 # disable_drawer: true
 
