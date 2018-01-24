@@ -20,13 +20,13 @@ tagline:             창업 망한 개발자
 description:         >
   창업 망한 개발자
   좋아하는 개발
-  아이디어 구현
-  새로운 기술을 배우기
-  재미있는 오픈 소스 사용
+  - 아이디어 구현
+  - 새로운 기술을 배우기
+  - 재미있는 오픈 소스 사용
 
 # This should be the same author as first entry in `_data/authors.yml`
 author:
-  name:              Kim min cheol
+  name:              mcauto
   email:             mcauto@naver.com
 
 # Fallback image and color
