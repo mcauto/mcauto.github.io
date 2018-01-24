@@ -32,7 +32,7 @@ description: 빠른 안드로이드 앱을 만들기 위한 seed project
 
 일단은 내가 사용해본 오픈소스 위주로 개발할 예정이다.
 
-[챌범: 최고 애정 앨범](https://play.google.com/apps/publish/?hl=ko&account=5107611040903352584)에 있는 개인용 앱에 필요한 오픈 소스부터 서버가 필요한 앱에 필요한 오픈소스까지 포스팅할 예정이다.
+[챌범: 최고 애정 앨범](https://play.google.com/store/apps/details?id=com.gofd.mcauto.chaelbum)에 있는 개인용 앱에 필요한 오픈 소스부터 서버가 필요한 앱에 필요한 오픈소스까지 포스팅할 예정이다.
 
 ## When?
 
