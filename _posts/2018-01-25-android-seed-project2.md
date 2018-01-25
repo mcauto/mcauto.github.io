@@ -228,3 +228,4 @@ public class SampleFragment extends Fragment{
 
 내부 기능은 이제 아이디어에 따라서 추가만 하면 끝!
 
+### 코드 확인 : [Android-seed-project](https://github.com/mcauto/Android-seed-project/tree/master)
