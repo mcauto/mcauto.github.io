@@ -2,7 +2,7 @@
 #  User configuration
 # -----------------------------------------------------------------------------
 
-title:               mcauto
+title:               Mincheol's Devlog
 
 # The unique resource location of your page.
 # Set to `https://<username>.github.io` when hosting on GitHub Pages
@@ -13,15 +13,12 @@ url:                 https://mcauto.github.io
 baseurl:             ""
 
 # A very short description of your page
-tagline:             창업 망한 개발자
+tagline:             Developer
 
 # A short description of the page, used in the sidebar and as fallback for the meta description tag.
 # Markdown enabled, but don't use more than one paragraph (enforced by `>`)
 description:         
-  좋아하는 개발
-  - 아이디어 구현
-  - 새로운 기술을 배우기
-  - 재미있는 오픈 소스 사용
+  Python, C++, Android Developer
 
 # This should be the same author as first entry in `_data/authors.yml`
 author:

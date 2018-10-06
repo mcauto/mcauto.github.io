@@ -8,11 +8,11 @@ mcauto:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    창업 망한 개발자
-    좋아하는 개발
-    - 아이디어 구현
-    - 새로운 기술을 배우기
-    - 재미있는 오픈 소스 사용
+    Android 개발자
+    
+    Python 개발자
+    
+    C++ 개발자
 
   # This photo will be used in the about section
   # picture:
