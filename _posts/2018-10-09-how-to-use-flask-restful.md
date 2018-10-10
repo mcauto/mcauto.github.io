@@ -2,12 +2,12 @@
 layout: post
 comments: true
 title: "Python으로 API 개발하기"
-date: 2018-10-07 18:00:00 +0900
+date: 2018-10-09 18:00:00 +0900
 categories: back-end
 description: Python framework Flask-RESTful을 이용한 API개발
 ---
 
-# Python으로 API 개발하기 1
+# Python으로 API 개발하기
 
 ### 개요
 
@@ -40,11 +40,13 @@ Flask는 어플리케이션 개발에 필요한 모듈만을 사용하기 때문
   - [Flask-RESTful](https://flask-restful.readthedocs.io/en/latest/): RESTful API 개발용
   - [Flask-SQLAlchemy](http://flask-sqlalchemy.pocoo.org/latest/): SQLAlchemy의 Flask 버전 모듈
     - [SQLAlchemy](https://www.sqlalchemy.org/): Python SQL Toolkit, Object Relational Mapper(ORM)
+  - [Flask-migrate](https://flask-migrate.readthedocs.io/en/latest/): Python ORM migrate at Database (such as Django migrate)
+  - [marshmallow](https://marshmallow.readthedocs.io/en/latest/): simplified object serialization
+    - [Marshmallow-jsonapi](https://marshmallow-jsonapi.readthedocs.io/en/latest/): serialization for json api
 - 추가 응용 모듈 (추후 업로드)
   - [Flask-RESTPlus](https://flask-restplus.readthedocs.io/en/stable/): Flask-RESTful + Swagger UI(Excutable, Visualizing APIs)
-  - [marshmallow](https://marshmallow.readthedocs.io/en/latest/): simplified object serialization
-  - [Marshmallow-jsonapi](https://marshmallow-jsonapi.readthedocs.io/en/latest/): serialization for json api
-  - [Flask-migrate](https://flask-migrate.readthedocs.io/en/latest/): Python ORM migrate at Database
+
+
 
 # How to?
 
@@ -113,11 +115,15 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-flask = "*"
-flask-restful = "*"
 pytest = "*"
-pytest-cov = "*"
-enum34 = "*"
+pytest-cov="*"
+flask-restful = "*"
+flask-sqlalchemy = "*"
+flask-migrate = "*"
+flask-script = "*"
+enum34="*"
+pymysql = "*"
+python-dotenv = "*"
 [dev-packages]
 
 [requires]
@@ -165,3 +171,52 @@ $ docker-compose up
 ```
 
 을 실행하면 mysql의 docker 이미지가 자동으로 다운로드되고 container로 띄워진다.
+
+
+
+#### 3. Flask App 구조 설계
+
+
+```bash
+Flask-RESTful-example
+├── .flaskenv
+├── Pipfile 
+├── README.md
+├── app
+│   ├── __init__.py
+│   ├── api
+│   │   ├── __init__.py
+│   │   └── database.py # SQLAlchemy
+│   ├── books # API Namespace example 
+│   │   ├── __init__.py
+│   │   ├── models.py # SQLAlchemy ORM Model, marshmallow Schema
+│   │   └── views.py # Flask Resource (such as Controller)
+│   ├── config.py # app config
+│   └── log # log folder
+├── docker-compose.yml
+├── images
+└── run.py
+```
+
+app: Flask application
+
+app/api: RESTful API 공통 명세 영역. 각 namespace의 view에 작성된 api의 route를 등록
+
+app/api/database.py: SQLAlchemy 인스턴스와 SQL에서 공통으로 사용되는 Create, Update, Delete 정의
+
+app/books: book model의 namespace
+
+app/books/models.py: SQLAlchemy ORM과 marshmallow의 Schema 사용하여 데이터베이스 모델 설계
+
+app/books/views.py: Flask-RESTful의 Resource를 이용하여 API 구현 (일반적으로 Item과 List를 구현)
+
+app/config.py: app의 설정
+
+app/log: app의 로그 저장위치
+
+docker-compose.yml: application 실행에 필요한 컨테이너 명세(mysql)
+
+images: README.md에 사용되는 이미지 리소스
+
+run.py: flask app의 main 실행 진입점
+
