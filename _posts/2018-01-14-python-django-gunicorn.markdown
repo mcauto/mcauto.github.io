@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "python 개발 환경 구축과 배포를 한번에!"
 date:   2018-01-14 00:21:13 +0900
-categories: back-end
+categories: infra
 description: python 개발 환경 구축
 ---
 
