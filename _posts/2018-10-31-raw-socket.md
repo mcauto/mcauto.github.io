@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title:  "Raw socket에 대하여 알아보자"
-date:   2018-10-30 22:00:00 +0900
+date:   2018-10-31 22:00:00 +0900
 categories: network
 description: Raw socket에 대하여 알아보자
 ---
