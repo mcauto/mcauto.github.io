@@ -36,8 +36,6 @@ description: Raw socket에 대하여 알아보자
 > | [RS-232](https://ko.wikipedia.org/wiki/RS-232)  · [RS-449](https://ko.wikipedia.org/w/index.php?title=RS-449&action=edit&redlink=1)  · [RS-485](https://ko.wikipedia.org/wiki/RS-485)  · [V.35](https://ko.wikipedia.org/w/index.php?title=V.35&action=edit&redlink=1)  · [V.34](https://ko.wikipedia.org/w/index.php?title=V.34&action=edit&redlink=1)  ·[I.430](https://ko.wikipedia.org/w/index.php?title=I.430&action=edit&redlink=1)  ·[I.431](https://ko.wikipedia.org/w/index.php?title=I.431&action=edit&redlink=1)  · [T1](https://ko.wikipedia.org/w/index.php?title=T1_(%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%82%B9)&action=edit&redlink=1)  · [E1](https://ko.wikipedia.org/w/index.php?title=E-carrier&action=edit&redlink=1)  · [POTS](https://ko.wikipedia.org/w/index.php?title=POTS&action=edit&redlink=1)  · [SONET/SDH](https://ko.wikipedia.org/w/index.php?title=SONET/SDH&action=edit&redlink=1)  · [OTN](https://ko.wikipedia.org/w/index.php?title=%EA%B4%91_%EC%A0%84%EC%86%A1_%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C&action=edit&redlink=1) · [DSL](https://ko.wikipedia.org/wiki/DSL)  · [802.11a/b/g/n PHY](https://ko.wikipedia.org/wiki/IEEE_802.11)  · [ITU-T G.hn PHY](https://ko.wikipedia.org/w/index.php?title=G.hn&action=edit&redlink=1)  · [이더넷](https://ko.wikipedia.org/w/index.php?title=%EC%9D%B4%EB%8D%94%EB%84%B7_%EB%AC%BC%EB%A6%AC_%EA%B3%84%EC%B8%B5&action=edit&redlink=1)  · [USB](https://ko.wikipedia.org/wiki/USB)  · [블루투스](https://ko.wikipedia.org/wiki/%EB%B8%94%EB%A3%A8%ED%88%AC%EC%8A%A4) |
 >
 > 각 계층은 하위 계층의 기능만을 이용하며, 상위 계층에게 기능을 제공한다.
->
-> 즉 상위 계층은 하위계층을 이용할 수 있으며, 하위계층은 상위계층을 이용할 수  없다.
 
 Raw socket은 인터넷 프로토콜 패킷을 주고받게 해주는 소켓이다.
 
