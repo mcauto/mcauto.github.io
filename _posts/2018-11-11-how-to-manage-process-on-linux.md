@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "Linux에서 Process를 관리하는 방법"
 date:   2018-11-11 19:00:00 +0900
-categories: back-end
+categories: infra
 description: Linux에서 Process를 관리하는 방법
 ---
 
