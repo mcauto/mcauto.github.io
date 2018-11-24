@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title:  "Golang 내용 정리"
-date:   2018-11-12 23:00:00 +0900
+date:   2018-11-25 01:11:00 +0900
 categories: back-end
 description: Golang 내용 정리
 ---
@@ -77,7 +77,17 @@ Goroutine: 2KB, PC, SP
 
 네트워크 쪽은 실제로 프로젝트를 진행해본 경험이 없어서 아직은 표현하기는 이른 듯 하다.
 
-하지만 고루틴은 확실히 사용하면서 좋다고 느꼈다.
+하지만 goroutine은 확실히 사용하면서 좋다고 느꼈다.
+
+> goroutine은 M:N thread이며 LWP(Light Weight Process)로 구현되어 있다고 한다. 
+>
+> 이론은 파면 팔수록 계속해서 쏟아져 나온다.
+>
+>  [goroutine vs threads](https://tech.ssut.me/goroutine-vs-threads/) 설명이 잘 되어 있다.
+>
+> [사용자수준 쓰레드와 커널수준 쓰레드의 차이?](https://kldp.org/node/295) 이건 좀 전투적인 글 댓글이 콜로세움이다.
+
+
 
 #### 효과적인 가비지 컬렉션
 
@@ -102,3 +112,14 @@ golang은 그런거 필요없이 `go build` 명령어 하나면 바이너리 파
 **컴파일 측면**
 
 의존성 해석 알고리즘을 통하여 사용하는 라이브러리만 컴파일한다.
+
+> ### Go build
+>
+> Golang에서 빌드 할 때 다음과 같은 옵션을 주면 디버깅 symbol을 제거한 바이너리를 생성하여 용량을 줄일 수 있다.
+>
+> [참고](https://groups.google.com/forum/#!msg/golang-korea/bP3ejliyiqQ/igHLKFBfX1gJ)
+>
+> ```bash
+> $ go build -ldflags "-s"
+> ```
+
