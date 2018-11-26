@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "2018년 마무리 준비"
-date: 2018-10-06 16:00:00 +0900
+date: 2018-11-26 23:00:00 +0900
 categories: essay
 description: 2018년의 정리 준비
 ---
@@ -21,11 +21,11 @@ description: 2018년의 정리 준비
 
 - [x] REST API 개발 (Python, Django, Flask)
 
-- [x] Linux Agent 개발 (C++)
+- [x] Linux Client 개발 (C++, Go)
 
 - [x] 테스트 주도 개발 (TDD)
 
-- [x] CI/CD (Jenkins, Docker)
+- [x] CI/CD (Jenkins, Gitlab CI, Docker)
 
 #### 2018년의 마무리는 어떻게 할 것인가?
 
