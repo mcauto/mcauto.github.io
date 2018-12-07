@@ -1,2 +1,4 @@
 User-agent: *
 Allow:/
+
+Sitemap: https://mcauto.github.io/sitemap.xml
