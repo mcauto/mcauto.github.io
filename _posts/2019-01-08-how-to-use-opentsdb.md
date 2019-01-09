@@ -97,7 +97,7 @@ http://localhost:4242
 
 로 접속하면 다음과 같은 화면을 볼 수 있다.
 
-![opentsdb_web_ui](/assets/img/opentsdb_web_ui)
+![opentsdb_web_ui](/assets/img/opentsdb_web_ui.png)
 
 이제 설치를 다했으므로 [HTTP API](http://opentsdb.net/docs/build/html/api_http/index.html)를 통하여 데이터를 저장해보자.
 
@@ -133,3 +133,5 @@ http://localhost:4242/api/query?start=1h-ago&m=sum:sys.cpu.nice
 ```
 
 ![opentsdb_read](/assets/img/opentsdb_read.png)
+
+#### [예제 프로젝트](https://github.com/mcauto/opentsdb-practice)
