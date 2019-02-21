@@ -27,15 +27,15 @@ README를 간단하게 해석해보면
 
 ![tsdb-architecture](http://opentsdb.net/img/tsdb-architecture.png)
 
-공식 사이트에서 제공하는 이미지를 통해 작동 원리를 알 수 있다.
+공식 사이트에서 제공하는 이미지를 통하여 작동 원리를 알 수 있다.
 
-실제 작동원리는 위와같이 수집 대상인 server 또는 network 장비들에서 collector가 TSD(Time Series Daemon)로 전송하면 TSD가 HBase에 저장하도록 설계 되어 있다.
+수집 대상인 server 또는 network 장비들에 설치된 collector 클라이언트가 TSD(Time Series Daemon) 서버로 전송하면 TSD가 HBase에 저장한다.
 
-OpenTSDB는 HTTP API, Web UI, Telnet 등으로 HBase에 읽고 쓰기를 지원한다.
+OpenTSDB는 HTTP API, Web UI, Telnet을 통한 읽기/쓰기를 지원한다.
 
-모든 접근은 동일한 포트(일반적으로 4242)에 접근하며 처음 몇 바이트를 조사하여 요청한 클라이언트의 프로토콜을 파악하여 처리한다.
+모든 접근은 동일한 포트(일반적으로 4242)에 접근하며 처음 몇 바이트를 조사하여 요청한 클라이언트의 프로토콜(HTTP, Telnet)을 파악하여 처리한다.
 
-TSDB에 저장되는 기본적인 데이터포맷은 다음과 같다.
+TSDB에 저장되는 기본적인 데이터 포맷은 다음과 같다.
 
 - Metric name
 - Unix timestamp(Epoch)
@@ -44,7 +44,7 @@ TSDB에 저장되는 기본적인 데이터포맷은 다음과 같다.
 
 Metric name은 key값으로 hashtable의 key로 생각하면 된다.
 
-Unix timestamp는 수집 시간
+Unix timestamp는 수집된 시간
 
 value는 해당 메트릭의 값
 
@@ -54,25 +54,39 @@ tags는 해당 메트릭의 추가 정보, 말 그대로 key-value로 이루어�
 
 ## 그래서 OpenTSDB란?
 
-결국 데이터를 저장하기 위한 데이터베이스이다.
+데이터를 저장하기 위한 데이터베이스 중 하나이다.
 
-대용량의 데이터를 쉽고 빠르게 읽고 쓰기가 가능한 storage가 필요해서 만들어진 것
+Row 기반인 관계형 데이터베이스(RDB)와 달리 Column 기반인 NoSQL의 데이터베이스이다.
+
+RDB는 말그대로 테이블간의 관계를 중요시 하지만 NoSQL은 그런거 없다. 
+
+그냥 Key Value로 많은 데이터를 읽고 쓰는 것에 특화되어있다. 
+
+HBase는 column 지향의 NoSQL으로 읽고 쓰기가 RDB에 비해 빠른 강점을 가지고있다.
+
+RDB와 달리 스키마가 없으므로 읽고 쓰기가 빠르고 운영 중 서버의 확장이 가능하다.
 
 ## 사용하기
 
-백문이 불여일견이라는 말이 있듯이 일단 사용해보면 감이 잡힌다.
+백문이 불여일견! 사용해보자!
 
-엄청난 기술의 집약체인 스마트폰도 우리는 그냥 사용한다.~~제대로 쓰고 있는지는 알 수 없지만~~
+우리는 현대 기술의 끝판왕 스마트폰도 **그냥** 사용한다. ~~제대로 쓰고 있는지는 알 수 없다~~
 
-OpenTSDB도 실제로 production에서 사용하려면 많은 설정과 세팅이 필요하다. 설정 이후에도 opentsdb의 수집 방식에 따라 모니터링 및 관리가 필요하다.
+OpenTSDB도 production에서 사용하려면 많은 설정과 세팅이 필요하다.
 
-하지만 단순히 공부(?)를 위해서라면 docker가 있다.
+> 참고: [HBase 설정법](http://engineering.vcnc.co.kr/2013/04/hbase-configuration/)
 
-docker hub에 검색하면 official은 아니지만 100K+의 다운로드를 받은 컨테이너들이 다수 보인다. 
+설정 이후에도 모니터링 및 지속적인 관리가 필요하다. 
+
+개발 혹은 학습 목적으로서의 구축이라면 docker를 이용하면 된다.
+
+docker hub에 opentsdb를 검색하면 official은 아니지만 100K+의 다운로드된 컨테이너들이 있다. 
 
 ![image-20190108230415102](/assets/img/docker_hub_opentsdb.png)
 
-가장 최신에 업데이트 된 petergrace/opentsdb-docker의 이미지를 받아서 실행하면 gnuplot 버전으로 인해서 실행이 안된다.
+>  ~~최근에 업데이트 된 petergrace/opentsdb-docker의 이미지를 받아서 실행하면 gnuplot 버전으로 인해서 실행이 안된다.~~  
+>
+>  Pull request를 드디어 받아줬다. 해외에도 깃허브는 하는사람만 하는 것 같다.
 
 opentsdb에 가서 [이슈](https://github.com/OpenTSDB/opentsdb/issues/1421)를 남겼더니 3.0 브랜치 기준으로 만들어진 dockerfile가 있었다. 
 
