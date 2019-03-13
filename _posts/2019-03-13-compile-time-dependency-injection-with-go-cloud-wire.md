@@ -1,3 +1,12 @@
+---
+layout: post
+comments: true
+title: "Compile-time Dependency Injection with Go Cloud's Wire [번역]"
+date: 2019-03-13 23:00:00 +0900
+categories: back-end
+description: golang의 의존성 주입 관련 프레임워크 공부와 번역을 통한 영어 공부
+---
+
 # Compile-time Dependency Injection with Go Cloud's Wire
 
 > [The Go Blog - Compile-time Dependency Injection With Go Cloud's Wire (2018. 10. 9.)](https://blog.golang.org/wire) 번역; 영어공부 및 기술 공부
